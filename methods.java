@@ -3,7 +3,7 @@ import java.util.*;
 public class methods {
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
-        System.out.print("Enter n: ");
+        //System.out.print("Enter n: ");
         // long n = s.nextLong();
         // System.out.print("Enter r: ");
         // long r = s.nextLong();
