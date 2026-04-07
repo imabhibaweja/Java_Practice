@@ -8,13 +8,17 @@ public class methods {
         // System.out.print("Enter r: ");
         // long r = s.nextLong();
         // System.out.println("Binomial cofficient of "+ n + " and " + r +" is "+ binomial(n,r));
-        int a = s.nextInt();
+        // int a = s.nextInt();
         // boolean result = isPrime1(a);
-        boolean result = isPrime2(a);
-        if(result)
-            System.out.println("Its a prime number");
-        else
-            System.out.println("its not a prime number");
+        // boolean result = isPrime2(a);
+        // if(result)
+        //     System.out.println("Its a prime number");
+        // else
+        //     System.out.println("its not a prime number");
+        System.out.print("Enter start and ending number of range respectively: ");
+        int a = s.nextInt();
+        int b = s.nextInt();
+        primesInRange(a, b);
         
     }
     public static long fact(long a){
@@ -52,5 +56,12 @@ public class methods {
             }
         }
         return result;
+    }
+    public static void primesInRange(int a, int b){
+        for(int i=a; i<=b;i++){
+            if(isPrime2(i)){
+                System.out.println(i+" is a prime number");
+            }
+        }
     }
 }
