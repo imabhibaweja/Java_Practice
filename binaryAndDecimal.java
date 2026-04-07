@@ -2,10 +2,11 @@ import java.util.*;
 public class binaryAndDecimal {
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
-        System.out.print(" Enter any binary number: ");
-        long n = s.nextLong();
-        System.out.println("Decimal form:"+ binaryToDecimal(n));
-        
+        System.out.print(" Enter any decimal number: ");
+        // long n = s.nextLong();
+        // System.out.println("Decimal form:"+ binaryToDecimal(n));
+        int n = s.nextInt();
+        System.out.println("Binary Form: "+ DecimalToBinary(n));
     }
     public static long binaryToDecimal(long a){
         long result = 0;
@@ -18,12 +19,14 @@ public class binaryAndDecimal {
         }
         return result;
     }
-    public static long DecimalToBinary(int n){
+    public static long DecimalToBinary(int a){
         long result = 0;
-        while(n>0){
-            int a = n%2;
-            result = (result*10)+a;
-            n/=2;
+        int i=0;
+        while(a>0){
+            long n=a%2;
+            result=result+((int)Math.pow(10, i)*n);
+            i++;
+            a/=2;
         }
         return result;
     }
