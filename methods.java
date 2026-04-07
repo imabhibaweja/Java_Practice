@@ -1,4 +1,4 @@
-import java.util.Scanner;
+import java.util.*;
 
 public class methods {
     public static void main(String[] args) {
@@ -9,7 +9,8 @@ public class methods {
         // long r = s.nextLong();
         // System.out.println("Binomial cofficient of "+ n + " and " + r +" is "+ binomial(n,r));
         int a = s.nextInt();
-        boolean result = isPrime1(a);
+        // boolean result = isPrime1(a);
+        boolean result = isPrime2(a);
         if(result)
             System.out.println("Its a prime number");
         else
@@ -35,6 +36,16 @@ public class methods {
     public static boolean isPrime1(int a){
         boolean result = true;
         for(int i=2;i<a;i++){
+            if(a%i==0){
+                result = false;
+                break;
+            }
+        }
+        return result;
+    }
+    public static boolean isPrime2(int a){
+         boolean result = true;
+        for(int i=2;i<Math.sqrt(a);i++){
             if(a%i==0){
                 result = false;
                 break;
