@@ -18,4 +18,13 @@ public class binaryAndDecimal {
         }
         return result;
     }
+    public static long DecimalToBinary(int n){
+        long result = 0;
+        while(n>0){
+            int a = n%2;
+            result = (result*10)+a;
+            n/=2;
+        }
+        return result;
+    }
 }
