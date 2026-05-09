@@ -15,8 +15,8 @@ public class binarySearch {
         System.out.println("Element is found at: "+ (binary(a, index)+1));
     }
     public static int binary(int a[], int index){
-        int start = 1;
-        int end = a.length;
+        int start = 0;
+        int end = a.length-1;
         
         while(start<=end){
             int mid = (start+end)/2;
