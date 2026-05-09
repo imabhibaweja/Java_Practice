@@ -3,6 +3,7 @@ public class maxSubarray{
         int a[] = {1,-2,3,-5,6};
         bruteForce(a);
         prefix(a);
+        kadane(a);
     }
     public static void bruteForce(int a[]){
         int curSum;
@@ -48,6 +49,17 @@ public class maxSubarray{
         }
         System.out.println("Maximum sum is "+ maxSum);
         
+    }
+    public static void kadane(int a[]){
+        int curSum=0;
+       int maxSum=Integer.MIN_VALUE;
+       for(int i=0;i<a.length;i++){
+            curSum=curSum+a[i];
+            if(curSum<0)
+                curSum=0;
+            maxSum=Math.max(maxSum, curSum);
+       }
+       System.out.println("Max Sum is "+ maxSum);
     }
     
 }
